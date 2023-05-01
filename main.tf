@@ -18,10 +18,10 @@ terraform {
 ## Terraform state backend
 terraform {
   backend "s3" {
-    bucket         = "tek-terraform-state"
+    bucket         = "devsecops-class-terraform"
     key            = "devsecops/vpc_ec2.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "dev-dynamo-terraform"
+    dynamodb_table = "devsecops-class-tf-lock"
   }
 }
